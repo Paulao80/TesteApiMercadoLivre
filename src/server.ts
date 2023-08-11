@@ -1,6 +1,6 @@
 import app from "./app";
 
-function normalizaPort(val: string) {
+function normalizaPort(val: any) {
   const port = parseInt(val, 10);
 
   if (isNaN(port)) return val;
@@ -10,7 +10,7 @@ function normalizaPort(val: string) {
   return false;
 }
 
-const port = normalizaPort(process.env.PORT ?? "3000");
+const port = normalizaPort(process.env.PORT ?? "3333");
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
